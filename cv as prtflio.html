@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vijaya Kumar | IT Student</title>
+
+    <meta name="description"
+        content="Vijaya Kumar - IT Student, aspiring AI professional and technology enthusiast.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #d1d5db;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        /* ================= MAIN ================= */
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .cv {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            padding: 55px;
+            background: #111827;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 8px;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            color: #d1d5db;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        .contact a {
+            color: #e5e7eb;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= CONTENT ================= */
+
+        .content {
+            padding: 45px 55px;
+        }
+
+        section {
+            margin-bottom: 42px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 55px;
+            height: 2px;
+            background: #111827;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            color: #4b5563;
+            max-width: 850px;
+        }
+
+        /* ================= EDUCATION ================= */
+
+        .education-item {
+            margin-bottom: 22px;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-item h3 {
+            font-size: 17px;
+            color: #111827;
+        }
+
+        .education-item .college {
+            font-weight: bold;
+            margin-top: 3px;
+        }
+
+        .education-item .details {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            border: 1px solid #e5e7eb;
+            padding: 22px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+        }
+
+        .project h3 {
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .project p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* ================= CERTIFICATIONS ================= */
+
+        .certifications {
+            display: grid;
+            gap: 12px;
+        }
+
+        .certification {
+            padding: 15px 18px;
+            border-left: 3px solid #111827;
+            background: #f9fafb;
+        }
+
+        .certification strong {
+            display: block;
+        }
+
+        .certification span {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* ================= INTERESTS ================= */
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest {
+            padding: 8px 14px;
+            background: #f3f4f6;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* ================= BUTTONS ================= */
+
+        .buttons {
+            margin-top: 28px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #374151;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #111827;
+        }
+
+        .btn-primary:hover {
+            background: #e5e7eb;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #374151;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                position: relative;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 35px 25px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 17px;
+            }
+
+            .content {
+                padding: 35px 25px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        /* ================= PRINT ================= */
+
+        @media print {
+
+            header,
+            .buttons,
+            footer {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .container {
+                margin: 0;
+                padding: 0;
+            }
+
+            .cv {
+                box-shadow: none;
+            }
+
+            .hero {
+                background: white;
+                color: black;
+            }
+
+            .hero h2,
+            .hero p,
+            .contact a {
+                color: #333;
+            }
+
+            .content {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+        <nav>
+            <div class="logo">Vijaya Kumar</div>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ================= CV ================= -->
+
+    <div class="container">
+
+        <div class="cv">
+
+            <!-- ================= HERO ================= -->
+
+            <section class="hero">
+
+                <h1>Vijaya Kumar</h1>
+
+                <h2>Information Technology Student | Aspiring AI Professional</h2>
+
+                <p>
+                    IT student passionate about technology, artificial intelligence,
+                    problem solving and building practical digital solutions.
+                    Currently developing my technical and professional skills
+                    while exploring opportunities in the IT industry.
+                </p>
+
+                <div class="contact">
+
+                    <span>📍 Puducherry, India</span>
+
+                    <a href="mailto:yourmail@example.com">
+                        ✉ yourmail@example.com
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/vijaya-kumar-0b4332386/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/vijaya0224"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                    </a>
+
+                    <a href="resume.pdf" class="btn btn-secondary" download>
+                        Download CV
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= CONTENT ================= -->
+
+            <div class="content">
+
+                <!-- ABOUT -->
+
+                <section id="about">
+
+                    <h2 class="section-title">
+                        About Me
+                    </h2>
+
+                    <p class="about">
+                        I am an Information Technology student currently pursuing
+                        my undergraduate degree at Christ College of Engineering
+                        and Technology. I am interested in artificial intelligence,
+                        emerging technologies and practical problem solving.
+                        I am continuously improving my programming, communication
+                        and professional skills with the goal of building a
+                        meaningful career in the technology industry.
+                    </p>
+
+                </section>
+
+
+                <!-- EDUCATION -->
+
+                <section id="education">
+
+                    <h2 class="section-title">
+                        Education
+                    </h2>
+
+                    <div class="education-item">
+
+                        <h3>
+                            Bachelor of Technology in Information Technology
+                        </h3>
+
+                        <p class="college">
+                            Christ College of Engineering and Technology
+                        </p>
+
+                        <p class="details">
+                            Puducherry | Expected Graduation: 2028
+                        </p>
+
+                    </div>
+
+
+                    <div class="education-item">
+
+                        <h3>
+                            Higher Secondary Education
+                        </h3>
+
+                        <p class="details">
+                            Chevalier Sellane Govt. Hr. sec. School | academic year 2024
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SKILLS -->
+
+                <section id="skills">
+
+                    <h2 class="section-title">
+                        Technical Skills
+                    </h2>
+
+                    <div class="skills">
+
+                        <span class="skill">Python</span>
+
+                        <span class="skill">HTML</span>
+
+                        <span class="skill">CSS</span>
+
+                        <span class="skill">JavaScript</span>
+
+                        <span class="skill">Git & GitHub</span>
+
+                        <span class="skill">AI Fundamentals</span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PROJECTS -->
+
+                <section id="projects">
+
+                    <h2 class="section-title">
+                        Projects
+                    </h2>
+
+                    <div class="projects">
+
+                        <div class="project">
+
+                            <h3>
+                                Eryndor
+                            </h3>
+
+                            <p>
+                                A web-based career and professional networking
+                                platform concept designed to connect job seekers
+                                and recruiters through profiles, portfolios and
+                                job opportunities.
+                            </p>
+
+                        </div>
+
+
+                        <div class="project">
+
+                            <h3>
+                                Personal CV Website
+                            </h3>
+
+                            <p>
+                                A responsive single-page personal CV website
+                                developed using HTML and CSS and deployed through
+                                GitHub Pages.
+                            </p>
+
+                        </div>
+
+
+                        <div class="project">
+
+                            <h3>
+                                Ocean Temperature Reconstruction
+                            </h3>
+
+                            <p>
+                                Academic hackathon project exploring satellite
+                                observations and deep learning techniques for
+                                reconstructing subsurface ocean temperature.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CERTIFICATIONS -->
+
+                <section id="certifications">
+
+                    <h2 class="section-title">
+                        Certifications & Learning
+                    </h2>
+
+                    <div class="certifications">
+
+                        <div class="certification">
+
+                            <strong>
+                                AI Fundamentals
+                            </strong>
+
+                            <span>
+                                IBM SkillsBuild / https://www.credly.com/badges/9284ddd9-496e-a920-f20d416fac6
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- INTERESTS -->
+
+                <section>
+
+                    <h2 class="section-title">
+                        Areas of Interest
+                    </h2>
+
+                    <div class="interests">
+
+                        <span class="interest">
+                            Artificial Intelligence
+                        </span>
+
+                        <span class="interest">
+                            Emerging Technologies
+                        </span>
+
+                        <span class="interest">
+                            Problem Solving
+                        </span>
+
+                        <span class="interest">
+                            Chess
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- LINKS -->
+
+                <section>
+
+                    <h2 class="section-title">
+                        Professional Links
+                    </h2>
+
+                    <p>
+                        🔗 LinkedIn:
+                        <a href="https://www.linkedin.com/in/vijaya-kumar-0b4332386/"
+                           target="_blank">
+                            linkedin.com/in/vijaya-kumar-0b4332386
+                        </a>
+                    </p>
+
+                    <p>
+                        💻 GitHub:
+                        <a href="https://github.com/vijaya0224"
+                           target="_blank">
+                            github.com/vijaya0224
+                        </a>
+                    </p>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 VijayaKumar · Personal CV
+
+    </footer>
+
+
+</body>
+</html>
